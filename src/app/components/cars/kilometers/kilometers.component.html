@@ -1,0 +1,28 @@
+<br>
+<div class="card bg-dark text-white text-center">
+  <div class="card-header">
+    <div class="row">
+    <div class="form-group">
+      <div class="col-md-4">
+        <button class="btn btn-primary" [routerLink]="['/cars']">Regresar</button>
+      </div>
+    </div>
+    <h2 class="offset-2">{{ title }}</h2>
+    </div>
+  </div>
+  <div class="card-body text-white">
+  <div class="row">
+    <div class="col-md-12">
+    <div style="display: block" class="text-white">
+      <canvas 
+      baseChart [data]="doughnutChartData" 
+      [labels]="doughnutChartLabels" 
+      [chartType]="doughnutChartType" 
+      [colors]="lineChartColors"
+      (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)">
+    </canvas>
+    </div>
+  </div>
+  </div>
+</div>

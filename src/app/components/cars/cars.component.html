@@ -1,0 +1,45 @@
+<br>
+<div class="container">
+  <div class="card text-white bg-primary">
+    <div class="card-header text-center">
+      <h1>Autos</h1>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title text-center">Aquí podra encontrar los mejores autos</h5>
+      <button class="btn btn-success" [routerLink]="['/cars-kilometers/']">Grafica de Kilometros</button>
+      <br>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Codigo</th>
+            <th>Foto</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Color</th>
+            <th>Detalles</th>
+            <!--<th>Editar</th>
+            <th>Eliminar</th>-->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let car of cars">
+            <td>{{car.id}}</td>
+            <td><img class="card-img-top" src={{car.image}} width="100%" height="180px" alt="Card image cap"></td>
+            <td>{{car.brand}}</td>
+            <td>{{car.model}}</td>
+            <td>{{car.color}}</td>
+            <td>
+              <button type="button" name="ver Detalles" class="btn btn-success" [routerLink]="['/carDetails/', car.id]">Detalles</button>
+            </td>
+            <!--<td>
+              <button type="button" name="ver Detalles" class="btn btn-warning" [routerLink]="['/form-cars/', car.id]">Editar</button>
+            </td>
+            <td>
+              <button type="button" name="ver Detalles" class="btn btn-danger">Eliminar</button>
+            </td>-->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

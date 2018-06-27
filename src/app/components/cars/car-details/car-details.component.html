@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card mt-5" style="width: 15rem;">
+    <div class="card-header hide" style="background-color: #2d3436; margin: 0px; padding: 0px; color: white">
+        <div class="">
+          <h4 class="card-title">{{car.model}}</h4>
+        </div>
+    </div>
+    <div class="card-block" style="background-color: #2d3436; color: white">
+        <p class="card-text">Combustible: {{carDetails.gas}}</p>
+        <p class="card-text">Precio: {{carDetails.price}}</p>
+        <p class="card-text">Año: {{carDetails.year}}</p>
+        <p class="card-text">Kilometros (recorridos): {{carDetails.kilometers}}</p>
+        <p class="card-text">Descripción: {{carDetails.description}}</p>
+    </div>
+    <div class="card-block" style="background-color: #2d3436; color: white">
+      <button class="btn btn-danger" [routerLink]="['/cars']">Regresar</button>
+    </div>
+  </div>
+</div>
